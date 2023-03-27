@@ -1,4 +1,4 @@
-const iconsList = [
+export const AdventureIcons = [
     {
         url: 'https://cdn-icons-png.flaticon.com/512/2822/2822374.png',
         alt: 'Swordsman'
@@ -154,7 +154,8 @@ const iconsList = [
 
 ]
 
-const treasureHunter = [
+
+export const treasureHunterIcons = [
     {
         url: 'https://cdn-icons-png.flaticon.com/512/7006/7006900.png',
         alt: 'Crown'
