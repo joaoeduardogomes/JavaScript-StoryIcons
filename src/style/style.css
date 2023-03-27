@@ -73,9 +73,14 @@ div.cube {
     border-radius: 20px;
 
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 div.cube img {
-    width: 100%;
+    width: 90%;
+    display: block;
+    margin: auto;
 }
 
 button#btn {

@@ -1,6 +1,6 @@
 import { AdventureIcons, treasureHunterIcons } from "./icons.js";
 
-// Sort icons function:
+//? Project functions:
 function sortIcons(iconsList) {
     const sortedIcons = [];
 
@@ -19,12 +19,13 @@ function sortIcons(iconsList) {
 
 function createCubes() {
     const iconsSection = document.querySelector('section#icons');
+    iconsSection.innerText = ""; // Clean everyting inside the section, so we don't just add more and more cubes.
 
-    for(let i = 1; i < 9; i++) {
+    for(let i = 0; i < 9; i++) {
         // The external div:
         const cube = document.createElement('div');
         cube.classList.add('cube');
-        cube.id = `cube-${i+1}`;
+        cube.id = `cube-${i}`;
 
         // The abbr to the img:
         const abbr = document.createElement('abbr');
@@ -41,12 +42,28 @@ function createCubes() {
     return iconsSection;
 }
 
-// Add event listener to btn:
+function combine(images) {
+    //* Binding images to cubes:
+    for (let i = 0; i < 9; i++) {
+        // Setting the abbr tag:
+        const abbr = document.querySelector(`#cube-${i} > abbr`);
+        abbr.title = images[i].alt;
+
+        // Setting the images and alt texts:
+        const img = document.querySelector(`#cube-${i} > abbr > img`);
+        img.src = images[i].url;
+        img.alt = images[i].alt;
+    }
+}
+
+
+//? Add event listener to btn:
 const button = document.getElementById('btn');
 button.addEventListener('click', () => {
-    const result = sortIcons(treasureHunterIcons);
-    console.log(result);
+    const icons = sortIcons(treasureHunterIcons);
 
-    const section = createCubes();
-    console.log(section);
+    createCubes();
+    //*console.log(cubes.children) // Pra acessar os elementos internos.
+
+    combine(icons);
 });
