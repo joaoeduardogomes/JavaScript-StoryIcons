@@ -101,3 +101,22 @@ button#btn:hover {
     background-color: var(--color-red);
     border-color: #701414;
 }
+
+@media screen and (max-width: 500px) {
+    main {
+        padding: 2rem;
+        margin: 0;
+        /* border: none; */
+        box-shadow: none;
+    }
+    section#icons {
+        max-width: calc((7.5rem * 2) + 5px);
+    }
+}
+
+@media screen and (max-width: 380px) {
+    
+    section#icons {
+        max-width: calc((7.5rem * 2) + 5px);
+    }
+}
