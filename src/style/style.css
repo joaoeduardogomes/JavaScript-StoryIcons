@@ -55,6 +55,8 @@ h1#title {
 p {
     font-family: var(--font-text);
     font-weight: 600;
+    max-width: 400px;
+    text-align: left;
 }
 
 section#icons {

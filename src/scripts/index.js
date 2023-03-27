@@ -61,6 +61,17 @@ function combine(images) {
     }
 }
 
+function changeBasics() {
+    const h1 = document.querySelector('h1#title');
+    h1.textContent = "Story Icons";
+
+    const p = document.querySelector('p');
+    p.innerText = `Here are your icons!
+    Go ahead and tell your story.
+
+    You can click on a dice to differentiate which ones are already part of the story and which ones are not.`
+}
+
 
 //? Add event listener to btn:
 const button = document.getElementById('btn');
@@ -71,5 +82,7 @@ button.addEventListener('click', () => {
     //*console.log(cubes.children) // Pra acessar os elementos internos.
 
     combine(icons);
+
+    changeBasics();
 });
 
