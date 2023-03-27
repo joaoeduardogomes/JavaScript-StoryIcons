@@ -121,6 +121,21 @@ button#btn:hover {
     backdrop-filter: blur(10px);
 }
 
+footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+footer > a {
+    text-decoration: none;
+    font-family: var(--font-text);
+    font-size: 1.2rem;
+    border-bottom: 1px solid transparent;
+    color: var(--color-blue);
+}
+footer > a:hover {
+    border-color: var(--color-blue);
+}
+
 @media screen and (max-width: 500px) {
     main {
         padding: 2rem;
