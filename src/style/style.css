@@ -61,6 +61,9 @@ section#icons {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 5px;
+
+    max-width: calc((7.5rem * 3) + 10px);
 }
 
 div.cube {
