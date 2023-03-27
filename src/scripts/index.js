@@ -37,6 +37,11 @@ function createCubes() {
         abbr.appendChild(img);
         cube.appendChild(abbr);
         iconsSection.appendChild(cube);
+
+        //* Selecting the clicked elements to manage those that are already part of the story:
+        cube.addEventListener('click', () => {
+            cube.classList.toggle('clicked');
+        });
     }
 
     return iconsSection;
@@ -67,3 +72,4 @@ button.addEventListener('click', () => {
 
     combine(icons);
 });
+
