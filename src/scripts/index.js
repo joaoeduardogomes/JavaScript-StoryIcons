@@ -17,9 +17,12 @@ function sortIcons(iconsList) {
     return sortedIcons;
 }
 
-function createCubes() {
+async function createCubes() {
     const iconsSection = document.querySelector('section#icons');
     iconsSection.innerText = ""; // Clean everyting inside the section, so we don't just add more and more cubes.
+
+    //! waiting for the loading icon:
+    await loader();
 
     for(let i = 0; i < 9; i++) {
         // The external div:
@@ -72,17 +75,32 @@ function changeBasics() {
     You can click on a dice to differentiate which ones are already part of the story and which ones are not.`
 }
 
+async function loader() {
+    // Show an loading icon for a short period of time
+    const loader = document.querySelector('div.loader');
+    loader.classList.remove('hidden');
+
+    await sleep(2000);
+
+    loader.classList.add('hidden')
+
+    //sleep(loader.classList.add('hidden'), 2000);
+}
+
+//! sleep function:
+const sleep = ms => new Promise(res => setTimeout(res, ms));
 
 //? Add event listener to btn:
 const button = document.getElementById('btn');
-button.addEventListener('click', () => {
+button.addEventListener('click', async () => {
     const icons = sortIcons(treasureHunterIcons);
 
-    createCubes();
+    await createCubes();
     //*console.log(cubes.children) // Pra acessar os elementos internos.
 
     combine(icons);
 
     changeBasics();
+
 });
 

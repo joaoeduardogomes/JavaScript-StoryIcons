@@ -123,6 +123,29 @@ button#btn:hover {
     backdrop-filter: blur(10px);
 }
 
+.loader{
+    margin: 0 0 2em;
+    height: 100px;
+    width: 20%;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto 1em;
+    display: inline-block;
+    vertical-align: top;
+}
+.loader p {
+    text-align: center;
+}
+/*! Set the loader color:*/
+svg path,
+svg rect{
+fill: var(--color-red);
+}
+/*? Esconder o loader:  */
+.hidden {
+    display: none;
+}
+
 footer {
     text-align: center;
     margin-top: 2rem;
