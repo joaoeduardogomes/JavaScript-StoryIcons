@@ -83,8 +83,6 @@ async function loader() {
     await sleep(2000);
 
     loader.classList.add('hidden')
-
-    //sleep(loader.classList.add('hidden'), 2000);
 }
 
 //! sleep function:
@@ -96,7 +94,6 @@ button.addEventListener('click', async () => {
     const icons = sortIcons(treasureHunterIcons);
 
     await createCubes();
-    //*console.log(cubes.children) // Pra acessar os elementos internos.
 
     combine(icons);
 
